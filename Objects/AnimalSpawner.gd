@@ -35,5 +35,5 @@ func _spawn_animal():
 	# 5. 将动物添加到场景树中
 	add_child(animal_instance)
 	
-	# 给它一个随机的初始旋转角度，让下落看起来更自然
-	animal_instance.rotation = randf_range(0, TAU)
+	## 给它一个随机的初始旋转角度，让下落看起来更自然
+	#animal_instance.rotation = randf_range(0, TAU)

@@ -3,6 +3,10 @@
 [ext_resource type="Script" uid="uid://cqo43y7yyacyk" path="res://Objects/AnimalBase.gd" id="1_rsaio"]
 [ext_resource type="Texture2D" uid="uid://3n6f8taiqbqq" path="res://Texture/AnimalBase.png" id="2_peu82"]
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_peu82"]
+friction = 0.05
+bounce = 0.1
+
 [sub_resource type="Shader" id="Shader_peu82"]
 code = "shader_type canvas_item;
 
@@ -39,6 +43,10 @@ size = Vector2(184, 140)
 
 [node name="AnimalBase" type="RigidBody2D" unique_id=1328516180]
 input_pickable = true
+physics_material_override = SubResource("PhysicsMaterial_peu82")
+can_sleep = false
+lock_rotation = true
+linear_damp = 4.0
 script = ExtResource("1_rsaio")
 animal_type = "AnimalBase"
 

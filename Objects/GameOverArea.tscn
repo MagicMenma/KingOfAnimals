@@ -3,13 +3,13 @@
 [ext_resource type="Script" uid="uid://cid5wn50vqgji" path="res://Objects/GameOverArea.gd" id="1_ogn1w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tqpnx"]
-size = Vector2(720, 61)
+size = Vector2(720, 13)
 
 [node name="Area2D" type="Area2D" unique_id=2078113873]
 script = ExtResource("1_ogn1w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=557756743]
-position = Vector2(360, -30.5)
+position = Vector2(360, -6.5)
 shape = SubResource("RectangleShape2D_tqpnx")
 
 [node name="Label" type="Label" parent="." unique_id=640455224]
@@ -30,5 +30,4 @@ theme_override_font_sizes/font_size = 32
 text = "Game Over Area"
 
 [node name="CheckTimer" type="Timer" parent="." unique_id=1651494489]
-wait_time = 1.5
 one_shot = true
