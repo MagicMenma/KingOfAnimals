@@ -1,0 +1,180 @@
+[gd_scene format=3 uid="uid://bajvq4bmj3div"]
+
+[ext_resource type="Texture2D" uid="uid://cvfibty0q0xay" path="res://Texture/theArtofWebcraft.png" id="1_06t4h"]
+[ext_resource type="Script" uid="uid://b3o8ux07hjp2i" path="res://main_menu.gd" id="1_fu7sn"]
+[ext_resource type="Texture2D" uid="uid://ljaqlxxjt6bl" path="res://Texture/introGallery_Big_Old.png" id="2_7vrkn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7vrkn"]
+texture = ExtResource("1_06t4h")
+modulate_color = Color(0.69965345, 0.69965345, 0.69965345, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rhts7"]
+bg_color = Color(5.8377795, 5.8377795, 5.837779, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.30980393)
+shadow_size = 5
+shadow_offset = Vector2(2, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7vrkn"]
+bg_color = Color(0.78431374, 0.78431374, 0.78431374, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.30980393)
+shadow_size = 5
+shadow_offset = Vector2(2, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jix8l"]
+bg_color = Color(0.78431374, 0.78431374, 0.78431374, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.30980393)
+shadow_size = 5
+shadow_offset = Vector2(2, 5)
+
+[node name="MainMenu" type="Control" unique_id=639013257]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fu7sn")
+
+[node name="OverrallBackground" type="Panel" parent="." unique_id=271737979]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_7vrkn")
+
+[node name="Background" type="Control" parent="." unique_id=385195225]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="IntroGalleryBigOld" type="Sprite2D" parent="Background" unique_id=1022953844]
+position = Vector2(-340, -520)
+scale = Vector2(0.375, 1.1924778)
+texture = ExtResource("2_7vrkn")
+centered = false
+
+[node name="StartGame" type="Button" parent="." unique_id=1633345420]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -157.75
+offset_top = -53.0
+offset_right = 157.75
+offset_bottom = 53.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.23392498, 0.23392567, 0.23392522, 1)
+theme_override_colors/font_focus_color = Color(0.15127617, 0.15127602, 0.15127611, 1)
+theme_override_colors/font_pressed_color = Color(0.23392498, 0.23392567, 0.23392522, 1)
+theme_override_colors/font_hover_color = Color(0.23392498, 0.23392567, 0.23392522, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.23392498, 0.23392567, 0.23392522, 1)
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jix8l")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_jix8l")
+text = "Start Game"
+
+[node name="Options" type="Button" parent="." unique_id=1178290770]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -116.0802
+offset_top = 182.0
+offset_right = 116.0802
+offset_bottom = 260.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.23392498, 0.23392567, 0.23392522, 1)
+theme_override_colors/font_focus_color = Color(0.15127617, 0.15127602, 0.15127611, 1)
+theme_override_colors/font_pressed_color = Color(0.23392498, 0.23392567, 0.23392522, 1)
+theme_override_colors/font_hover_color = Color(0.23392498, 0.23392567, 0.23392522, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.23392498, 0.23392567, 0.23392522, 1)
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jix8l")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_jix8l")
+text = "Options"
+
+[node name="Login" type="Button" parent="." unique_id=1162530722]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -157.75
+offset_top = -53.0
+offset_right = 157.75
+offset_bottom = 53.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.23392498, 0.23392567, 0.23392522, 1)
+theme_override_colors/font_focus_color = Color(0.15127617, 0.15127602, 0.15127611, 1)
+theme_override_colors/font_pressed_color = Color(0.23392498, 0.23392567, 0.23392522, 1)
+theme_override_colors/font_hover_color = Color(0.23392498, 0.23392567, 0.23392522, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.23392498, 0.23392567, 0.23392522, 1)
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jix8l")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_jix8l")
+text = "Login"
+
+[node name="GuestPlay" type="Button" parent="." unique_id=1842472830]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -116.0802
+offset_top = 88.0
+offset_right = 116.0802
+offset_bottom = 166.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.23392498, 0.23392567, 0.23392522, 1)
+theme_override_colors/font_focus_color = Color(0.15127617, 0.15127602, 0.15127611, 1)
+theme_override_colors/font_pressed_color = Color(0.23392498, 0.23392567, 0.23392522, 1)
+theme_override_colors/font_hover_color = Color(0.23392498, 0.23392567, 0.23392522, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.23392498, 0.23392567, 0.23392522, 1)
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jix8l")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_jix8l")
+text = "Guest Play"
+
+[connection signal="pressed" from="StartGame" to="." method="_on_start_game_pressed"]
