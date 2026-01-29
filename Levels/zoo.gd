@@ -9,7 +9,3 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-
-func _input(event):
-	if event is InputEventMouseButton and event.pressed:
-		print("屏幕被点击了，点击位置: ", event.position)

@@ -13,13 +13,9 @@ func _input_event(_viewport, event, _shape_idx):
 
 func toggle_selection():
 	is_selected = !is_selected
-	print("selected")
 	# 所有的动物都共用这一套高亮和选中逻辑
 	$Sprite2D.material.set_shader_parameter("active", is_selected)
 	$Sprite2D.material.set_shader_parameter("line_color", hover_color)
 	
-	
-	#if is_selected:
-		#GameManager.add_to_selection(self)
-	#else:
-		#GameManager.remove_from_selection(self)
+	if is_selected:
+		GameManager.add_to_selection(self)

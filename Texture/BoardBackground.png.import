@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dtnix72lu7kxf"
-path="res://.godot/imported/Capybara.png-2db3bcff8768f4c51d41d8ddf7e068fa.ctex"
+uid="uid://dh18r65r8w0bq"
+path="res://.godot/imported/BoardBackground.png-793e0a0a85a41a3556268c87026f2351.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Texture/Capybara.png"
-dest_files=["res://.godot/imported/Capybara.png-2db3bcff8768f4c51d41d8ddf7e068fa.ctex"]
+source_file="res://Texture/BoardBackground.png"
+dest_files=["res://.godot/imported/BoardBackground.png-793e0a0a85a41a3556268c87026f2351.ctex"]
 
 [params]
 

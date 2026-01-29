@@ -15,6 +15,10 @@ run/main_scene="uid://dj8sb6153pbye"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://Texture/icon.svg"
 
+[autoload]
+
+GameManager="*uid://dt5clm78uckci"
+
 [display]
 
 window/size/viewport_width=720
@@ -25,6 +29,8 @@ window/stretch/aspect="expand"
 [physics]
 
 3d/physics_engine="Jolt Physics"
+2d/sleep_threshold_linear=1.0
+2d/time_before_sleep=3.0
 
 [rendering]
 

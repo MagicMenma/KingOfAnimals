@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://o27oxm01rcwb"]
+
+[ext_resource type="Script" uid="uid://beoxyrqs864iv" path="res://Objects/AnimalSpawner.gd" id="1_dub1p"]
+[ext_resource type="Texture2D" uid="uid://cap7vja4bajsc" path="res://Texture/AnimalSpawner.png" id="2_4ko2h"]
+
+[node name="AnimalSpawner" type="Node2D" unique_id=6480400]
+script = ExtResource("1_dub1p")
+
+[node name="Generator" type="Sprite2D" parent="." unique_id=1806639444]
+texture = ExtResource("2_4ko2h")
+centered = false

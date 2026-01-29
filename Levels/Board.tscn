@@ -1,17 +1,16 @@
 [gd_scene format=3 uid="uid://dj8sb6153pbye"]
 
-[ext_resource type="Texture2D" uid="uid://c56xyodkv8tff" path="res://Texture/Zoo.png" id="1_17l2q"]
 [ext_resource type="Script" uid="uid://inmr3xh4l3ae" path="res://Levels/zoo.gd" id="1_i4kd7"]
 [ext_resource type="Texture2D" uid="uid://cvfibty0q0xay" path="res://Texture/theArtofWebcraft.png" id="1_y0vwi"]
-[ext_resource type="PackedScene" uid="uid://cdqrkqpfuqseb" path="res://Objects/AnimalBase.tscn" id="3_i4kd7"]
-[ext_resource type="Texture2D" uid="uid://bde30nifoiqrm" path="res://Texture/icon.svg" id="5_2kqea"]
+[ext_resource type="Texture2D" uid="uid://dh18r65r8w0bq" path="res://Texture/BoardBackground.png" id="3_lwha7"]
+[ext_resource type="PackedScene" uid="uid://cccss10al4gie" path="res://Objects/Platform.tscn" id="4_lwha7"]
+[ext_resource type="PackedScene" uid="uid://be3qw6jhtryjk" path="res://Objects/Capybara.tscn" id="5_lwha7"]
+[ext_resource type="PackedScene" uid="uid://cos13cipdy1vs" path="res://Objects/Rabbit.tscn" id="6_lwha7"]
+[ext_resource type="PackedScene" uid="uid://o27oxm01rcwb" path="res://Objects/AnimalSpawner.tscn" id="7_ppong"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m0gry"]
 texture = ExtResource("1_y0vwi")
 modulate_color = Color(0.69965345, 0.69965345, 0.69965345, 1)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2kqea"]
-size = Vector2(128, 127)
 
 [node name="Zoo" type="Control" unique_id=677469318]
 layout_mode = 3
@@ -49,30 +48,31 @@ grow_vertical = 2
 
 [node name="Zoo" type="Sprite2D" parent="MainCanvas" unique_id=643697850]
 position = Vector2(-342, -521.00006)
-scale = Vector2(0.9903714, 1.1341721)
-texture = ExtResource("1_17l2q")
+texture = ExtResource("3_lwha7")
 centered = false
 
-[node name="Platform" type="StaticBody2D" parent="MainCanvas" unique_id=1756405469]
-position = Vector2(20, 523)
-scale = Vector2(5.646328, 0.5921413)
+[node name="Platform" parent="MainCanvas" unique_id=380902931 instance=ExtResource("4_lwha7")]
+position = Vector2(-340, -520)
 
-[node name="Icon" type="Sprite2D" parent="MainCanvas/Platform" unique_id=135666806]
-texture = ExtResource("5_2kqea")
+[node name="Capybara2" parent="MainCanvas" unique_id=1875165192 instance=ExtResource("5_lwha7")]
+position = Vector2(161, -625)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MainCanvas/Platform" unique_id=990645127]
-position = Vector2(0, -0.5)
-shape = SubResource("RectangleShape2D_2kqea")
+[node name="Capybara3" parent="MainCanvas" unique_id=734085115 instance=ExtResource("5_lwha7")]
+position = Vector2(-42, -542)
 
-[node name="Capybara4" parent="MainCanvas" unique_id=1328516180 instance=ExtResource("3_i4kd7")]
-position = Vector2(-200, -852)
+[node name="Capybara4" parent="MainCanvas" unique_id=304725683 instance=ExtResource("5_lwha7")]
+position = Vector2(-122, -741)
 
-[node name="Capybara3" parent="MainCanvas" unique_id=1073768529 instance=ExtResource("3_i4kd7")]
-position = Vector2(69, -704)
+[node name="Rabbit" parent="MainCanvas" unique_id=1955588762 instance=ExtResource("6_lwha7")]
+position = Vector2(-66, -942)
 
-[node name="Capybara2" parent="MainCanvas" unique_id=1999503215 instance=ExtResource("3_i4kd7")]
-position = Vector2(264, -593)
-rotation = 0.385306
+[node name="Rabbit2" parent="MainCanvas" unique_id=1593204766 instance=ExtResource("6_lwha7")]
+position = Vector2(-224, -607)
 
-[node name="Capybara" parent="MainCanvas" unique_id=634458228 instance=ExtResource("3_i4kd7")]
-position = Vector2(-56, -386)
+[node name="Rabbit3" parent="MainCanvas" unique_id=79481373 instance=ExtResource("6_lwha7")]
+position = Vector2(315, -600)
+
+[node name="AnimalSpawner" parent="MainCanvas" unique_id=6480400 instance=ExtResource("7_ppong")]
+position = Vector2(22, -778)
+animal_scenes = Array[PackedScene]([ExtResource("5_lwha7"), ExtResource("6_lwha7")])
+spawn_interval = 0.3

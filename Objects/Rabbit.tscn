@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://cdqrkqpfuqseb"]
+[gd_scene format=3 uid="uid://cos13cipdy1vs"]
 
-[ext_resource type="Script" uid="uid://cqo43y7yyacyk" path="res://Objects/animal_base.gd" id="1_rsaio"]
-[ext_resource type="Texture2D" uid="uid://3n6f8taiqbqq" path="res://Texture/AnimalBase.png" id="2_peu82"]
+[ext_resource type="PackedScene" uid="uid://cdqrkqpfuqseb" path="res://Objects/AnimalBase.tscn" id="1_4etow"]
+[ext_resource type="Texture2D" uid="uid://lmvul6ned8mx" path="res://Texture/Rabbit.png" id="2_jmvtb"]
 
 [sub_resource type="Shader" id="Shader_peu82"]
 code = "shader_type canvas_item;
@@ -27,25 +27,23 @@ void fragment() {
 }
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_bsmu7"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jmvtb"]
 resource_local_to_scene = true
 shader = SubResource("Shader_peu82")
 shader_parameter/line_color = Color(1, 1, 1, 1)
 shader_parameter/line_thickness = 10.0
 shader_parameter/active = false
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rsaio"]
-size = Vector2(184, 140)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jmvtb"]
+size = Vector2(122, 68)
 
-[node name="AnimalBase" type="RigidBody2D" unique_id=1328516180]
-input_pickable = true
-script = ExtResource("1_rsaio")
-animal_type = "AnimalBase"
+[node name="Rabbit" unique_id=1328516180 instance=ExtResource("1_4etow")]
+animal_type = "Rabbit"
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1944208589]
-material = SubResource("ShaderMaterial_bsmu7")
-scale = Vector2(0.61641943, 0.6141953)
-texture = ExtResource("2_peu82")
+[node name="Sprite2D" parent="." index="0" unique_id=1944208589]
+material = SubResource("ShaderMaterial_jmvtb")
+texture = ExtResource("2_jmvtb")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=886505176]
-shape = SubResource("RectangleShape2D_rsaio")
+[node name="CollisionShape2D" parent="." index="1" unique_id=886505176]
+position = Vector2(-3, 18)
+shape = SubResource("RectangleShape2D_jmvtb")
