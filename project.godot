@@ -15,7 +15,9 @@ config/version="0.12"
 run/main_scene="uid://dj8sb6153pbye"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 boot_splash/bg_color=Color(0.9607843, 0.79607844, 0.83137256, 1)
+boot_splash/image="uid://b2mgoqtp3s5gg"
 config/icon="res://Texture/icon.png"
+boot_splash/minimum_display_time=1500
 
 [autoload]
 
