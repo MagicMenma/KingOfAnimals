@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" uid="uid://inmr3xh4l3ae" path="res://Levels/zoo.gd" id="1_i4kd7"]
 [ext_resource type="Texture2D" uid="uid://cvfibty0q0xay" path="res://Texture/theArtofWebcraft.png" id="1_y0vwi"]
-[ext_resource type="Texture2D" uid="uid://dh18r65r8w0bq" path="res://Texture/BoardBackground.png" id="3_lwha7"]
 [ext_resource type="PackedScene" uid="uid://cccss10al4gie" path="res://Objects/Platform.tscn" id="4_lwha7"]
 [ext_resource type="PackedScene" uid="uid://be3qw6jhtryjk" path="res://Objects/Capybara.tscn" id="5_lwha7"]
 [ext_resource type="PackedScene" uid="uid://cos13cipdy1vs" path="res://Objects/Rabbit.tscn" id="6_lwha7"]
 [ext_resource type="PackedScene" uid="uid://o27oxm01rcwb" path="res://Objects/AnimalSpawner.tscn" id="7_ppong"]
+[ext_resource type="PackedScene" uid="uid://b681wblh574ft" path="res://Objects/GameOverArea.tscn" id="8_7f1ut"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m0gry"]
 texture = ExtResource("1_y0vwi")
@@ -46,31 +46,11 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Zoo" type="Sprite2D" parent="MainCanvas" unique_id=643697850]
-position = Vector2(-342, -521.00006)
-texture = ExtResource("3_lwha7")
-centered = false
-
 [node name="Platform" parent="MainCanvas" unique_id=380902931 instance=ExtResource("4_lwha7")]
 position = Vector2(-340, -520)
 
-[node name="Capybara2" parent="MainCanvas" unique_id=1875165192 instance=ExtResource("5_lwha7")]
-position = Vector2(161, -625)
-
-[node name="Capybara3" parent="MainCanvas" unique_id=734085115 instance=ExtResource("5_lwha7")]
-position = Vector2(-42, -542)
-
-[node name="Capybara4" parent="MainCanvas" unique_id=304725683 instance=ExtResource("5_lwha7")]
-position = Vector2(-122, -741)
-
-[node name="Rabbit" parent="MainCanvas" unique_id=1955588762 instance=ExtResource("6_lwha7")]
-position = Vector2(-66, -942)
-
-[node name="Rabbit2" parent="MainCanvas" unique_id=1593204766 instance=ExtResource("6_lwha7")]
-position = Vector2(-224, -607)
-
-[node name="Rabbit3" parent="MainCanvas" unique_id=79481373 instance=ExtResource("6_lwha7")]
-position = Vector2(315, -600)
+[node name="GameOverArea" parent="MainCanvas" unique_id=1590744256 instance=ExtResource("8_7f1ut")]
+position = Vector2(-340, -520)
 
 [node name="AnimalSpawner" parent="MainCanvas" unique_id=6480400 instance=ExtResource("7_ppong")]
 position = Vector2(22, -778)

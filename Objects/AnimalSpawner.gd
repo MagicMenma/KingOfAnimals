@@ -8,6 +8,7 @@ extends Node2D
 @export var spawn_width: float = 300.0
 
 var timer: Timer
+var stopSpawning = false
 
 func _ready():
 	# 1. 创建并配置计时器
@@ -20,7 +21,7 @@ func _ready():
 	timer.start()
 
 func _spawn_animal():
-	if animal_scenes.size() == 0:
+	if animal_scenes.size() == 0 || stopSpawning == true:
 		return
 	
 	# 3. 随机选择一种动物
