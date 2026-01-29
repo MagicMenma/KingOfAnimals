@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c56xyodkv8tff" path="res://Texture/Zoo.png" id="1_17l2q"]
 [ext_resource type="Script" uid="uid://inmr3xh4l3ae" path="res://Levels/zoo.gd" id="1_i4kd7"]
 [ext_resource type="Texture2D" uid="uid://cvfibty0q0xay" path="res://Texture/theArtofWebcraft.png" id="1_y0vwi"]
-[ext_resource type="PackedScene" uid="uid://cdqrkqpfuqseb" path="res://Objects/Capybara.tscn" id="3_i4kd7"]
+[ext_resource type="PackedScene" uid="uid://cdqrkqpfuqseb" path="res://Objects/AnimalBase.tscn" id="3_i4kd7"]
 [ext_resource type="Texture2D" uid="uid://bde30nifoiqrm" path="res://Texture/icon.svg" id="5_2kqea"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m0gry"]
@@ -20,6 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 script = ExtResource("1_i4kd7")
 
 [node name="OverrallBackground" type="Panel" parent="." unique_id=1566793151]
@@ -29,6 +30,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_m0gry")
 
 [node name="MainCanvas" type="Control" parent="." unique_id=80234001]

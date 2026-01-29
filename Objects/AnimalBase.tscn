@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://cdqrkqpfuqseb"]
+
+[ext_resource type="Texture2D" uid="uid://dtnix72lu7kxf" path="res://Texture/capybara.png" id="1_omk2g"]
+[ext_resource type="Script" uid="uid://cqo43y7yyacyk" path="res://Objects/animal_base.gd" id="1_rsaio"]
+
+[sub_resource type="Shader" id="Shader_peu82"]
+code = "shader_type canvas_item;
+
+uniform vec4 line_color : source_color = vec4(1.0, 1.0, 1.0, 1.0); // 描边颜色
+uniform float line_thickness : hint_range(0, 10) = 15.0; // 描边粗细
+uniform bool active = false; // 是否开启高亮
+
+void fragment() {
+    vec4 col = texture(TEXTURE, UV);
+    if (active) {
+        vec2 size = TEXTURE_PIXEL_SIZE * line_thickness;
+        float outline = texture(TEXTURE, UV + vec2(-size.x, 0)).a;
+        outline += texture(TEXTURE, UV + vec2(size.x, 0)).a;
+        outline += texture(TEXTURE, UV + vec2(0, -size.y)).a;
+        outline += texture(TEXTURE, UV + vec2(0, size.y)).a;
+        outline = min(outline, 1.0);
+        
+        COLOR = mix(col, line_color, outline - col.a);
+    } else {
+        COLOR = col;
+    }
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bsmu7"]
+shader = SubResource("Shader_peu82")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 10.0
+shader_parameter/active = false
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_omk2g"]
+radius = 93.87496
+height = 296.6843
+
+[node name="AnimalBase" type="RigidBody2D" unique_id=1328516180]
+input_pickable = true
+script = ExtResource("1_rsaio")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1944208589]
+material = SubResource("ShaderMaterial_bsmu7")
+scale = Vector2(0.61641943, 0.6141953)
+texture = ExtResource("1_omk2g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=886505176]
+position = Vector2(-3, 9)
+rotation = -1.6801666
+scale = Vector2(0.61641943, 0.6141953)
+shape = SubResource("CapsuleShape2D_omk2g")
