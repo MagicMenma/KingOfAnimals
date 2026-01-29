@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://cihlanfwqllx6"]
+
+[ext_resource type="Texture2D" uid="uid://dh18r65r8w0bq" path="res://Texture/BoardBackground.png" id="1_id5w3"]
+[ext_resource type="FontFile" uid="uid://dxmcymu82uvb0" path="res://Fonts/dpcomic.ttf" id="2_wo486"]
+
+[sub_resource type="FontVariation" id="FontVariation_j46me"]
+base_font = ExtResource("2_wo486")
+
+[node name="GameOver" type="Control" unique_id=146784199]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BoardBackground" type="Sprite2D" parent="." unique_id=1859888809]
+position = Vector2(0, 72)
+scale = Vector2(1, 0.87999964)
+texture = ExtResource("1_id5w3")
+centered = false
+
+[node name="Label" type="Label" parent="." unique_id=2076636021]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -233.5
+offset_top = -43.5
+offset_right = 233.5
+offset_bottom = 43.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.14406255, 0.14406255, 0.14406255, 1)
+theme_override_fonts/font = SubResource("FontVariation_j46me")
+theme_override_font_sizes/font_size = 72
+text = "Oop-stack!"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Label" unique_id=2134611068]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = 23.5
+offset_right = 250.0
+offset_bottom = 110.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.14406255, 0.14406255, 0.14406255, 1)
+theme_override_fonts/font = SubResource("FontVariation_j46me")
+theme_override_font_sizes/font_size = 40
+text = "Too many friends in the hot tub!"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
