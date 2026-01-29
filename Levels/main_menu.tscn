@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bajvq4bmj3div"]
 
 [ext_resource type="Texture2D" uid="uid://cvfibty0q0xay" path="res://Texture/theArtofWebcraft.png" id="1_06t4h"]
-[ext_resource type="Script" uid="uid://b3o8ux07hjp2i" path="res://main_menu.gd" id="1_fu7sn"]
+[ext_resource type="Script" uid="uid://b3o8ux07hjp2i" path="res://Levels/main_menu.gd" id="1_fu7sn"]
 [ext_resource type="Texture2D" uid="uid://ljaqlxxjt6bl" path="res://Texture/introGallery_Big_Old.png" id="2_7vrkn"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7vrkn"]

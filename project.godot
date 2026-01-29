@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="KingOfAnimals"
-run/main_scene="uid://bajvq4bmj3div"
+run/main_scene="uid://dj8sb6153pbye"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://Texture/icon.svg"
 

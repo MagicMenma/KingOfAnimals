@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://cycmbirmaqwto"]
 
-[ext_resource type="Texture2D" uid="uid://cvfibty0q0xay" path="res://Texture/theArtofWebcraft.png" id="1_8kjbg"]
-[ext_resource type="Texture2D" uid="uid://c56xyodkv8tff" path="res://Texture/Zoo.png" id="2_8kjbg"]
+[ext_resource type="Texture2D" uid="uid://cvfibty0q0xay" path="res://Texture/theArtofWebcraft.png" id="1_2rk73"]
+[ext_resource type="Script" uid="uid://inmr3xh4l3ae" path="res://Levels/zoo.gd" id="1_ibyfs"]
+[ext_resource type="Texture2D" uid="uid://c56xyodkv8tff" path="res://Texture/Zoo.png" id="2_ibyfs"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m0gry"]
-texture = ExtResource("1_8kjbg")
+texture = ExtResource("1_2rk73")
 modulate_color = Color(0.69965345, 0.69965345, 0.69965345, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8kjbg"]
@@ -44,6 +45,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ibyfs")
 
 [node name="OverrallBackground" type="Panel" parent="." unique_id=1566793151]
 layout_mode = 1
@@ -71,7 +73,7 @@ grow_vertical = 2
 [node name="Zoo" type="Sprite2D" parent="Background" unique_id=643697850]
 position = Vector2(-342, -521.00006)
 scale = Vector2(0.9903714, 1.1341721)
-texture = ExtResource("2_8kjbg")
+texture = ExtResource("2_ibyfs")
 centered = false
 
 [node name="StartGame" type="Button" parent="." unique_id=1834014417]

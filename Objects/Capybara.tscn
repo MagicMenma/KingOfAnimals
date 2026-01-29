@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cdqrkqpfuqseb"]
+
+[ext_resource type="Texture2D" uid="uid://dtnix72lu7kxf" path="res://Texture/capybara.png" id="1_omk2g"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_omk2g"]
+radius = 93.87496
+height = 296.6843
+
+[node name="Capybara" type="RigidBody2D" unique_id=1328516180]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1944208589]
+scale = Vector2(0.61641943, 0.6141953)
+texture = ExtResource("1_omk2g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=886505176]
+position = Vector2(-3, 9)
+rotation = -1.6801666
+scale = Vector2(0.61641943, 0.6141953)
+shape = SubResource("CapsuleShape2D_omk2g")
