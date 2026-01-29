@@ -10,10 +10,12 @@ config_version=5
 
 [application]
 
-config/name="KingOfAnimals"
+config/name="King Of Animals"
+config/version="0.12"
 run/main_scene="uid://dj8sb6153pbye"
 config/features=PackedStringArray("4.6", "GL Compatibility")
-config/icon="res://Texture/icon.svg"
+boot_splash/bg_color=Color(0.9607843, 0.79607844, 0.83137256, 1)
+config/icon="res://Texture/icon.png"
 
 [autoload]
 
