@@ -33,7 +33,7 @@ func _on_body_exited(_body):
 		check_timer.stop()
 
 func _on_game_over_triggered():
-	print("游戏失败！物体溢出！")
+	print("❌❌❌游戏失败！物体溢出！❌❌❌")
 	
 	# 2. 发射信号，通知外界“我这里溢出了！”
 	overflow_occurred.emit()

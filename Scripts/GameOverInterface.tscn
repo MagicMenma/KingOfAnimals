@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cihlanfwqllx6"]
 
 [ext_resource type="Texture2D" uid="uid://dh18r65r8w0bq" path="res://Texture/BoardBackground.png" id="1_id5w3"]
+[ext_resource type="Script" uid="uid://b3uev2yj08fd3" path="res://Scripts/GameOverInterface.gd" id="1_j46me"]
 [ext_resource type="FontFile" uid="uid://dxmcymu82uvb0" path="res://Fonts/dpcomic.ttf" id="2_wo486"]
 
 [sub_resource type="FontVariation" id="FontVariation_j46me"]
@@ -13,6 +14,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_j46me")
 
 [node name="BoardBackground" type="Sprite2D" parent="." unique_id=1859888809]
 position = Vector2(0, 72)
@@ -22,11 +24,11 @@ centered = false
 
 [node name="Label" type="Label" parent="." unique_id=2076636021]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 0.44166666
 anchor_right = 0.5
-anchor_bottom = 0.5
+anchor_bottom = 0.44166666
 offset_left = -233.5
 offset_top = -43.5
 offset_right = 233.5
@@ -61,3 +63,41 @@ text = "Too many friends in the hot tub!"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
+
+[node name="Lobby" type="Button" parent="." unique_id=2132854469]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = 98.0
+offset_right = 128.0
+offset_bottom = 164.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_wo486")
+theme_override_font_sizes/font_size = 30
+text = "Back to Lobby"
+
+[node name="AdsAgain" type="Button" parent="." unique_id=1244222010]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = 184.0
+offset_right = 128.0
+offset_bottom = 268.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_wo486")
+theme_override_font_sizes/font_size = 30
+text = "Watch Ads
+Check-in Again"
+
+[connection signal="pressed" from="Lobby" to="." method="_on_lobby_pressed"]
+[connection signal="pressed" from="AdsAgain" to="." method="_on_ads_again_pressed"]

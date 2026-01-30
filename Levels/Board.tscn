@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://c6rsy31s4ooeh" path="res://Levels/Board.gd" id="1_7f1ut"]
 [ext_resource type="Texture2D" uid="uid://cvfibty0q0xay" path="res://Texture/theArtofWebcraft.png" id="1_y0vwi"]
 [ext_resource type="PackedScene" uid="uid://cccss10al4gie" path="res://Scripts/Platform.tscn" id="4_lwha7"]
+[ext_resource type="FontFile" uid="uid://dxmcymu82uvb0" path="res://Fonts/dpcomic.ttf" id="4_vidin"]
 [ext_resource type="PackedScene" uid="uid://be3qw6jhtryjk" path="res://Animals/Capybara.tscn" id="5_lwha7"]
 [ext_resource type="PackedScene" uid="uid://cos13cipdy1vs" path="res://Animals/Rabbit.tscn" id="6_lwha7"]
 [ext_resource type="PackedScene" uid="uid://o27oxm01rcwb" path="res://Animals/AnimalSpawner.tscn" id="7_ppong"]
@@ -49,6 +50,26 @@ grow_vertical = 2
 
 [node name="Platform" parent="MainCanvas" unique_id=380902931 instance=ExtResource("4_lwha7")]
 position = Vector2(-340, -520)
+
+[node name="ScoreLabel" type="Label" parent="MainCanvas" unique_id=684294229]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = 478.0
+offset_right = 20.0
+offset_bottom = 520.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_vidin")
+theme_override_font_sizes/font_size = 40
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="GameOverArea" parent="MainCanvas" unique_id=1590744256 instance=ExtResource("8_7f1ut")]
 position = Vector2(-340, -707)

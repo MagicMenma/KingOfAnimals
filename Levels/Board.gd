@@ -1,10 +1,12 @@
 extends Control
 
 @onready var game_over_ui = $MainCanvas/GameOverInterface
+@onready var score_label = $MainCanvas/ScoreLabel
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	_update_score_display(GameManager.current_score)
+	GameManager.score_changed.connect(_on_game_manager_score_changed)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -15,8 +17,12 @@ func _on_game_over_area_overflow_occurred() -> void:
 	# 1. 显示 UI
 	game_over_ui.visible = true
 	
-	# 2. 停止物理计算（让动物们在温泉里定格，很有电影感）
-	get_tree().paused = true
 	
-	# 3. 如果你的弹窗里有按钮，确保它们能被点击
-	# 后面会提到如何设置“暂停时不停止 UI”
+# 处理分数区域
+# 这是一个内部处理函数，专门负责更新文字
+func _update_score_display(new_score):
+	if score_label:
+		score_label.text = "Score: " + str(new_score)
+# 当信号触发时执行
+func _on_game_manager_score_changed(new_score):
+	_update_score_display(new_score)
