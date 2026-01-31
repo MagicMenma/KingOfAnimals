@@ -3,6 +3,7 @@ extends Control
 @onready var game_over_ui = $MainCanvas/GameOverInterface
 @onready var score_label = $MainCanvas/ScoreLabel
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	_update_score_display(GameManager.current_score)
@@ -12,12 +13,6 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-
-
-func _unhandled_input(event):
-	# 检测鼠标左键点击或手机触摸
-	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		GameManager.clear_selection()
 
 
 func _on_game_over_area_overflow_occurred() -> void:

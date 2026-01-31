@@ -184,7 +184,7 @@ offset_right = 175.0
 offset_bottom = -21.0
 grow_horizontal = 2
 grow_vertical = 2
-max_value = 5000.0
+max_value = 20000.0
 step = 0.1
 texture_under = ExtResource("5_tpdr6")
 texture_over = ExtResource("5_yhjgs")
@@ -200,7 +200,7 @@ anchor_bottom = 0.5
 offset_left = -239.5
 offset_top = 18.5
 offset_right = 239.5
-offset_bottom = 51.5
+offset_bottom = 84.5
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(240, 16)
@@ -208,7 +208,8 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("2_wo486")
 theme_override_font_sizes/normal_font_size = 36
 bbcode_enabled = true
-text = "$$$ [color=#69EAFF]0 / 20000 to Unlock"
+text = "$$$ [color=#69EAFF]0[/color] / 20000 to Unlock
+Today's Mystery Animal"
 fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1

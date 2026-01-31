@@ -55,11 +55,12 @@ func play_score_animation():
 
 # 专门更新文字的辅助函数
 func _update_label_text(current_animated_val: int):
-	status_label.text = "$$$ [shake rate=20.0 level=10][color=#69EAFF]%d[/color][/shake] / 20000 to Unlock" % current_animated_val
+	var format_string = "$$$ [shake rate=15.0 level=8][color=#69EAFF]%d[/color][/shake] / %d to Unlock\nToday's Mystery Animal"
+	status_label.text = format_string % [current_animated_val, progress_bar.max_value]
 	
 	# 每次数字变动，让整个 Label 稍微放大一点再缩回去
 	var t = create_tween()
-	t.tween_property(status_label, "scale", Vector2(1.5, 1.5), 0.05)
+	t.tween_property(status_label, "scale", Vector2(1.3, 1.3), 0.05)
 	t.tween_property(status_label, "scale", Vector2(1.0, 1.0), 0.05)
 
 

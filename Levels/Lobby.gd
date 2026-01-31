@@ -12,4 +12,5 @@ func _process(delta: float) -> void:
 
 
 func _on_start_game_pressed() -> void:
+	GameManager.daily_stamina -= 1
 	get_tree().change_scene_to_file("res://Levels/Board.tscn")

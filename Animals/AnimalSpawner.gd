@@ -3,7 +3,8 @@ extends Node2D
 # 在检查器中拖入你想要生成的动物场景
 @export var animal_scenes: Array[PackedScene] = []
 # 生成间隔（秒）
-@export var spawn_interval: float = 1.5
+@export var spawn_interval: float = 0.75
+@export var min_interval: float = 0.1
 # 左右随机生成的范围（相对于生成器中心）
 @export var spawn_width: float = 300.0
 
@@ -34,6 +35,11 @@ func _spawn_animal():
 	
 	# 5. 将动物添加到场景树中
 	add_child(animal_instance)
-	
-	## 给它一个随机的初始旋转角度，让下落看起来更自然
-	#animal_instance.rotation = randf_range(0, TAU)
+
+
+func _on_difficulty_timer_timeout() -> void:
+	# 每 5 秒提升一次难度
+	if spawn_interval > min_interval:
+		spawn_interval -= 0.05
+		timer.wait_time = spawn_interval
+		print("难度提升！当前间隔：", spawn_interval)

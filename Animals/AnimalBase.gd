@@ -15,15 +15,18 @@ func _ready():
 
 func _input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-		toggle_selection()
-		get_viewport().set_input_as_handled()
+		selected()
 
 
-func toggle_selection():
-	is_selected = !is_selected
+func selected():
 	# 所有的动物都共用这一套高亮和选中逻辑
-	$Sprite2D.material.set_shader_parameter("active", is_selected)
+	$Sprite2D.material.set_shader_parameter("active", true)
 	$Sprite2D.material.set_shader_parameter("line_color", hover_color)
 	
-	if is_selected:
+	if !is_selected:
+		is_selected = true
 		GameManager.add_to_selection(self)
+
+func deselected():
+	is_selected = false
+	$Sprite2D.material.set_shader_parameter("active", false)
