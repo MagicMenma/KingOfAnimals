@@ -27,7 +27,7 @@ void fragment() {
 }
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_7wm0i"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fo5rj"]
 resource_local_to_scene = true
 shader = SubResource("Shader_peu82")
 shader_parameter/line_color = Color(1, 1, 1, 1)
@@ -42,7 +42,7 @@ height = 181.85695
 animal_type = "Capybara"
 
 [node name="Sprite2D" parent="." index="0" unique_id=1944208589]
-material = SubResource("ShaderMaterial_7wm0i")
+material = SubResource("ShaderMaterial_fo5rj")
 texture = ExtResource("2_7wm0i")
 
 [node name="CollisionShape2D" parent="." index="1" unique_id=886505176]

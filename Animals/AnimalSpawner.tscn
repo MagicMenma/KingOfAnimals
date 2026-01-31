@@ -7,5 +7,6 @@
 script = ExtResource("1_dub1p")
 
 [node name="Generator" type="Sprite2D" parent="." unique_id=1806639444]
+visible = false
 scale = Vector2(0.5438596, 0.54385966)
 texture = ExtResource("2_4ko2h")

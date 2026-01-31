@@ -7,9 +7,17 @@ extends RigidBody2D
 
 var is_selected = false
 
+func _ready():
+	# 随机水平翻转逻辑
+	if randf() > 0.5:
+		$Sprite2D.flip_h = true
+		$CollisionShape2D.rotation *= -1
+
 func _input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 		toggle_selection()
+		get_viewport().set_input_as_handled()
+
 
 func toggle_selection():
 	is_selected = !is_selected

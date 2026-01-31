@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpwrwypjuhrd5"
-path="res://.godot/imported/capybara.png-4eb6ea09262cb5db9ea2c110d986fbad.ctex"
+uid="uid://bn4c1v2eg4ox5"
+path="res://.godot/imported/1.png-9d8327c94b5524ac1495a7c18b647f02.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Texture/capybara.png"
-dest_files=["res://.godot/imported/capybara.png-4eb6ea09262cb5db9ea2c110d986fbad.ctex"]
+source_file="res://Texture/ProgressBar/1.png"
+dest_files=["res://.godot/imported/1.png-9d8327c94b5524ac1495a7c18b647f02.ctex"]
 
 [params]
 

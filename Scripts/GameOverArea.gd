@@ -4,6 +4,7 @@ extends Area2D
 signal overflow_occurred
 
 @onready var check_timer = $CheckTimer
+@onready var Collision_Shape = $CollisionShape2D
 
 func _ready():
 	# 连接信号：当有物体进入区域时
@@ -34,6 +35,7 @@ func _on_body_exited(_body):
 
 func _on_game_over_triggered():
 	print("❌❌❌游戏失败！物体溢出！❌❌❌")
+	Collision_Shape.disabled = true;
 	
 	# 2. 发射信号，通知外界“我这里溢出了！”
 	overflow_occurred.emit()
@@ -41,6 +43,3 @@ func _on_game_over_triggered():
 	var spawner = get_tree().root.find_child("AnimalSpawner", true, false)
 	if spawner:
 		spawner.stopSpawning = true
-	
-	# 这里可以触发展示游戏结束的 UI
-	# ShowGameOverUI()

@@ -1,8 +1,12 @@
 [gd_scene format=3 uid="uid://cihlanfwqllx6"]
 
-[ext_resource type="Texture2D" uid="uid://dh18r65r8w0bq" path="res://Texture/BoardBackground.png" id="1_id5w3"]
 [ext_resource type="Script" uid="uid://b3uev2yj08fd3" path="res://Scripts/GameOverInterface.gd" id="1_j46me"]
+[ext_resource type="Texture2D" uid="uid://cn44co8jo10wh" path="res://Texture/GameOverBG.png" id="2_j46me"]
 [ext_resource type="FontFile" uid="uid://dxmcymu82uvb0" path="res://Fonts/dpcomic.ttf" id="2_wo486"]
+[ext_resource type="Texture2D" uid="uid://bcf1gixtuioa0" path="res://Texture/MysteryAnimal.png" id="4_dfdi5"]
+[ext_resource type="Texture2D" uid="uid://05wc08deteg2" path="res://Texture/ProgressBar/Under.png" id="5_tpdr6"]
+[ext_resource type="Texture2D" uid="uid://dem4sxj1ykela" path="res://Texture/ProgressBar/Over.png" id="5_yhjgs"]
+[ext_resource type="Texture2D" uid="uid://di3n2srwuope1" path="res://Texture/ProgressBar/Progress.png" id="6_tpdr6"]
 
 [sub_resource type="FontVariation" id="FontVariation_j46me"]
 base_font = ExtResource("2_wo486")
@@ -17,25 +21,24 @@ grow_vertical = 2
 script = ExtResource("1_j46me")
 
 [node name="BoardBackground" type="Sprite2D" parent="." unique_id=1859888809]
-position = Vector2(0, 72)
-scale = Vector2(1, 0.87999964)
-texture = ExtResource("1_id5w3")
+texture = ExtResource("2_j46me")
 centered = false
 
-[node name="Label" type="Label" parent="." unique_id=2076636021]
+[node name="Title" type="Label" parent="." unique_id=2076636021]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.44166666
+anchor_top = 0.06809263
 anchor_right = 0.5
-anchor_bottom = 0.44166666
+anchor_bottom = 0.06809263
 offset_left = -233.5
-offset_top = -43.5
+offset_top = 51.45996
 offset_right = 233.5
-offset_bottom = 43.5
+offset_bottom = 138.45996
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.14406255, 0.14406255, 0.14406255, 1)
+theme_override_colors/font_shadow_color = Color(0.87058824, 0.87058824, 0.87058824, 1)
 theme_override_fonts/font = SubResource("FontVariation_j46me")
 theme_override_font_sizes/font_size = 72
 text = "Oop-stack!"
@@ -43,13 +46,13 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="Label" unique_id=2134611068]
+[node name="SubTitle" type="Label" parent="Title" unique_id=2134611068]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 0.45402297
 anchor_right = 0.5
-anchor_bottom = 0.5
+anchor_bottom = 0.45402297
 offset_left = -250.0
 offset_top = 23.5
 offset_right = 250.0
@@ -57,6 +60,7 @@ offset_bottom = 110.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.14406255, 0.14406255, 0.14406255, 1)
+theme_override_colors/font_shadow_color = Color(0.87058824, 0.87058824, 0.87058824, 1)
 theme_override_fonts/font = SubResource("FontVariation_j46me")
 theme_override_font_sizes/font_size = 40
 text = "Too many friends in the hot tub!"
@@ -64,34 +68,40 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Lobby" type="Button" parent="." unique_id=2132854469]
+[node name="ButtonSet" type="Control" parent="." unique_id=509182133]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Lobby" type="Button" parent="ButtonSet" unique_id=2132854469]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -128.0
-offset_top = 98.0
-offset_right = 128.0
-offset_bottom = 164.0
+offset_left = 212.0
+offset_top = 763.0
+offset_right = 468.0
+offset_bottom = 829.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_wo486")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 28
 text = "Back to Lobby"
 
-[node name="AdsAgain" type="Button" parent="." unique_id=1244222010]
+[node name="AdsAgain" type="Button" parent="ButtonSet" unique_id=1244222010]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -128.0
-offset_top = 184.0
-offset_right = 128.0
-offset_bottom = 268.0
+offset_left = 212.0
+offset_top = 622.0
+offset_right = 468.0
+offset_bottom = 706.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_wo486")
@@ -99,5 +109,110 @@ theme_override_font_sizes/font_size = 30
 text = "Watch Ads
 Check-in Again"
 
-[connection signal="pressed" from="Lobby" to="." method="_on_lobby_pressed"]
-[connection signal="pressed" from="AdsAgain" to="." method="_on_ads_again_pressed"]
+[node name="NoStamina" type="Label" parent="ButtonSet/AdsAgain" unique_id=647664514]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -94.0
+offset_top = 50.0
+offset_right = 94.0
+offset_bottom = 73.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_wo486")
+theme_override_font_sizes/font_size = 24
+text = "More Vouchers 🎫 Tomorrow"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayAgain" type="Button" parent="ButtonSet" unique_id=557351472]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 212.0
+offset_top = 622.0
+offset_right = 468.0
+offset_bottom = 706.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_wo486")
+theme_override_font_sizes/font_size = 36
+text = "Play Again"
+
+[node name="Stamina" type="Label" parent="ButtonSet/PlayAgain" unique_id=1000985781]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -94.0
+offset_top = 50.0
+offset_right = 94.0
+offset_bottom = 73.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_wo486")
+theme_override_font_sizes/font_size = 24
+text = "Vouchers Left: 🎫🎫"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MysteryAnimal" type="Sprite2D" parent="." unique_id=558655518]
+position = Vector2(359.99997, 395.99997)
+scale = Vector2(0.73280424, 0.73280424)
+texture = ExtResource("4_dfdi5")
+
+[node name="ProgressBar" type="TextureProgressBar" parent="." unique_id=59182351]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -175.0
+offset_top = -46.0
+offset_right = 175.0
+offset_bottom = -21.0
+grow_horizontal = 2
+grow_vertical = 2
+max_value = 5000.0
+step = 0.1
+texture_under = ExtResource("5_tpdr6")
+texture_over = ExtResource("5_yhjgs")
+texture_progress = ExtResource("6_tpdr6")
+
+[node name="StatusLabel" type="RichTextLabel" parent="ProgressBar" unique_id=701700789]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -239.5
+offset_top = 18.5
+offset_right = 239.5
+offset_bottom = 51.5
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(240, 16)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_wo486")
+theme_override_font_sizes/normal_font_size = 36
+bbcode_enabled = true
+text = "$$$ [color=#69EAFF]0 / 20000 to Unlock"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="ButtonSet/Lobby" to="." method="_on_lobby_pressed"]
+[connection signal="pressed" from="ButtonSet/AdsAgain" to="." method="_on_ads_again_pressed"]
+[connection signal="pressed" from="ButtonSet/PlayAgain" to="." method="_on_play_again_pressed"]

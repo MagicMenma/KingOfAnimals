@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://inmr3xh4l3ae" path="res://Levels/Lobby.gd" id="1_f5k8n"]
 [ext_resource type="Texture2D" uid="uid://cvfibty0q0xay" path="res://Texture/theArtofWebcraft.png" id="2_ueq3s"]
 [ext_resource type="Texture2D" uid="uid://c56xyodkv8tff" path="res://Texture/Lobby.png" id="3_j83j6"]
+[ext_resource type="FontFile" uid="uid://dxmcymu82uvb0" path="res://Fonts/dpcomic.ttf" id="4_ueq3s"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m0gry"]
 texture = ExtResource("2_ueq3s")
@@ -94,6 +95,7 @@ theme_override_colors/font_focus_color = Color(0.15127617, 0.15127602, 0.1512761
 theme_override_colors/font_pressed_color = Color(0.23392498, 0.23392567, 0.23392522, 1)
 theme_override_colors/font_hover_color = Color(0.23392498, 0.23392567, 0.23392522, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.23392498, 0.23392567, 0.23392522, 1)
+theme_override_fonts/font = ExtResource("4_ueq3s")
 theme_override_font_sizes/font_size = 36
 theme_override_styles/normal = SubResource("StyleBoxFlat_8kjbg")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_nrckh")
