@@ -39,6 +39,7 @@ func _on_game_over_triggered():
 	
 	# 2. 发射信号，通知外界“我这里溢出了！”
 	overflow_occurred.emit()
+	GameManager.game_over = true
 	
 	var spawner = get_tree().root.find_child("AnimalSpawner", true, false)
 	if spawner:

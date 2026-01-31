@@ -6,9 +6,9 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	GameManager.game_over = false
 	_update_score_display(GameManager.current_score)
 	GameManager.score_changed.connect(_on_game_manager_score_changed)
-	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

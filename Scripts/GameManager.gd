@@ -7,9 +7,9 @@ var current_score: int = 0
 var daily_score: int = 0
 var daily_stamina: int = 3
 var current_selection = []
+var game_over: bool = false
 
-
-func add_to_selection(animal):
+func add_to_selection(animal):                               #游戏失败后停止计算合集
 	current_selection.append(animal)
 	
 	if current_selection.size() == 2:
